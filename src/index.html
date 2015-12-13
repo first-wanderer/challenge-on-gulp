@@ -2,26 +2,89 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Title</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <title>Challenge</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="image/img-shortcut.png">
+    <link rel="shortcut icon" href="img/img-shortcut.png">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
     //= template/header.html
 
-    <div class="content">
-      Content of Wanderer
+    <div class="index-content">
+      <section class="features">
+        <div class="l-container l-flex">
+          <div class="feature col-3">
+            <div class="feature-title">Гибкий график обучения</div>
+            <p class="feture-desc">Современный темп жизни требует гибкого подхода к расписанию.</p>
+          </div>
+          <div class="feature col-3">
+            <div class="feature-title">Практические занятия</div>
+            <p class="feture-desc">На одной теории далеко не уедешь, поэтому мы обучаем на практике.</p>
+          </div>
+          <div class="feature col-3">
+            <div class="feature-title">Не оставим без работы</div>
+            <p class="feture-desc">Хорошие специалисты всегда в цене и Вы станете именно таким.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="learning">
+        <div class="l-container">
+          <a href="#" class="about-programma">Подробнее о программе</a>
+          <h2 class="section-title">Формы обучения</h2>
+          <table>
+            <tr>
+              <th>Название</th>
+              <th>Длительность</th>
+              <th>Описание</th>
+            </tr>
+            <tr>
+              <td>Дневное обучение</td>
+              <td>4 года</td>
+              <td>Наиболее интенсивный вариант обучения, для тех,   кто не терпит компромиссов ни в чем.</td>
+            </tr>
+            <tr>
+              <td>Вечернее обучение</td>
+              <td>5 лет</td>
+              <td>Вынуждены совмещать учебу с работой? Дадим вам такую возможность, совмещайте на здоровье.</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <section class="feedback">
+        <div class="l-container">
+          <h2 class="section-title">Обратная связь</h2>
+          <div class="l-flex">
+            <div class="feedback-form">
+              <form action="/" method="post">
+                <label for="name">ФИО:</label>
+                <input type="text" id="name" name="name" placeholder="Представьтесь, пожалуйста">
+                <span class="label">Пол:</span>
+                <input type="radio" id="male" name="gender" value="male" checked>
+                <label for="male">Мужской</label>
+                <input type="radio" id="female" name="gender" value="male">
+                <label for="female">Женский</label>
+                <label for="message">Доп. текст:</label>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Сообщите о себе все, что считаете нужным"></textarea>
+                <button type="submit" class="btn">Отправить</button>
+              </form>
+            </div>
+            <div class="feedback-text">
+              <div class="feed-head">Заинтересовались обучением на нашей кафедре?</div>
+              <p>Заполните короткую форму обратной связи и отправьте нам.</p>
+              <p>Мы подготовим для вас индивидуальное предложение и выйдем на связь!</p>
+              <p><b>Внимание!</b> Все поля обязательны для заполнения.</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
 
     //= template/footer.html
 
     <script src="js/script.js"></script>
-    <!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
-    <!-- Google Analytics counter --><!-- /Google Analytics counter -->
   </body>
 </html>
