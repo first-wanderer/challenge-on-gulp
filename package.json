@@ -1,7 +1,6 @@
 {
   "name": "challenge-on-gulp",
   "version": "1.0.0",
-  "private": true,
   "author": "First Wanderer",
   "devDependencies": {
     "browser-sync": "^2.9.11",
