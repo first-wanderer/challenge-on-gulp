@@ -13,7 +13,7 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     reload = browserSync.reload,
     runSequence = require('gulp-run-sequence'),
-    gutil = require('gulp-util'),
+    plumber = require('gulp-plumber'),
     jscs = require('gulp-jscs'),
     htmlhint = require('gulp-htmlhint');
 
@@ -45,7 +45,7 @@ var config = {
     server: {
         baseDir: "./build"
     },
-    tunnel: true,
+    //tunnel: true,
     host: 'localhost',
     port: 9000,
     logPrefix: "Wanderer"
@@ -78,23 +78,24 @@ gulp.task('clean', function (cb) {
 
 gulp.task('html:build', function () {
     gulp.src(path.src.html)
+        .pipe(plumber())
         .pipe(rigger())
         .pipe(gulp.dest(path.build.html))
-        .on('error', gutil.log)
         .pipe(reload({stream: true}));
 });
 
 gulp.task('js:build', function () {
     gulp.src(path.src.js)
+        .pipe(plumber())
         .pipe(rigger())
         .pipe(uglify())
         .pipe(gulp.dest(path.build.js))
-        .on('error', gutil.log)
         .pipe(reload({stream: true}));
 });
 
 gulp.task('style:build', function () {
     gulp.src(path.src.style)
+        .pipe(plumber())
         .pipe(sass({
             includePaths: ['src/style/'],
             outputStyle: 'compressed',
@@ -103,7 +104,6 @@ gulp.task('style:build', function () {
         .pipe(prefixer())
         .pipe(cssmin())
         .pipe(gulp.dest(path.build.css))
-        .on('error', gutil.log)
         .pipe(reload({stream: true}));
 });
 
@@ -116,7 +116,6 @@ gulp.task('image:build', function () {
             interlaced: true
         }))
         .pipe(gulp.dest(path.build.img))
-        .on('error', gutil.log)
         .pipe(reload({stream: true}));
 });
 
@@ -145,6 +144,11 @@ gulp.task('watch', function(){
         gulp.start('image:build');
     });
 });
+
+gulp.task('reboot', [
+    'webserver',
+    'watch'
+]);
 
 gulp.task('default', [
     'build',

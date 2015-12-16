@@ -1,19 +1,17 @@
 // базовые стили
-// body {
-//   min-width: $min-width;
-//   font-family: $font;
-//   font-weight: 400;
-//   font-size: 14px;
-//   line-height: 1.42857143;
-//   color: #fff;
-//   background-color: $bg-c;
-//   letter-spacing: 1px;
-// }
+body {
+  min-width: $min-width;
+  font-family: $font;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #000;
+  background-color: #fff;
+}
 
-// a {
-//   color: #fff;
-//   text-decoration: none;
-// }
+a {
+  color: $link-c;
+}
 
 // section {
 //   position: relative;

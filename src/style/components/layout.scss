@@ -9,6 +9,18 @@
 //   }
 // }
 .l-container {
-  width: 960px;
+  max-width: $desktop;
   margin: 0 auto;
+  padding: 0 30px;
+}
+
+.l-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-nav {
+  .l-flex {
+    width: 670px;
+  }
 }

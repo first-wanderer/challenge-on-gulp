@@ -1,0 +1,21 @@
+.page-header {
+  padding-top: 30px;
+  color: #fff;
+  background-color: $bg-c;
+  a {
+    color: #fff;
+  }
+}
+
+.page-nav {
+  align-items: center;
+  font-family: $font-b;
+  font-weight: bold;
+  font-size: 18px;
+  ul {
+    @include reset-ul;
+  }
+  a {
+    text-decoration: none;
+  }
+}
