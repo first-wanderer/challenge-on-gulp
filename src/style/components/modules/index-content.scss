@@ -1,0 +1,33 @@
+.features {
+  padding-top: 50px;
+  padding-bottom: 45px;
+  text-align: center;
+  background-color: $sect-bg-c;
+}
+
+.feature {
+  margin-right: 30px;
+  padding-top: 90px;
+  &:nth-child(1) {
+    @include m-icon($icon-adv-1);
+  }
+  &:nth-child(2) {
+    @include m-icon($icon-adv-2);
+  }
+  &:nth-child(3) {
+    @include m-icon($icon-adv-3);
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+  &-title {
+    padding-bottom: 20px;
+    font-family: $font-b;
+    font-weight: bold;
+    font-size: 22px;
+  }
+  &-desc {
+    line-height: 24px;
+    color: $text-c;
+  }
+}

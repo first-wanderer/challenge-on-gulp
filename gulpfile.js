@@ -15,7 +15,8 @@ var gulp = require('gulp'),
     runSequence = require('gulp-run-sequence'),
     plumber = require('gulp-plumber'),
     jscs = require('gulp-jscs'),
-    htmlhint = require('gulp-htmlhint');
+    htmlhint = require('gulp-htmlhint'),
+    spritesmith = require('gulp.spritesmith');
 
 
 var path = {
@@ -23,14 +24,17 @@ var path = {
         html: 'build/',
         js: 'build/js/',
         css: 'build/css/',
-        img: 'build/img/'
+        img: 'build/img/',
+        spriteimg: 'src/img/',
+        spritecss: 'src/style/components/'
     },
     src: {
         html: 'src/*.html',
         js: 'src/js/script.js',
         jsall: 'src/js/**/*.js',
         style: 'src/style/style.scss',
-        img: 'src/img/**/*.*'
+        img: 'src/img/**/*.*',
+        sprite: 'src/img/sprite/*.*'
     },
     watch: {
         html: 'src/**/*.html',
@@ -74,6 +78,21 @@ gulp.task('webserver', function () {
 
 gulp.task('clean', function (cb) {
     rimraf(path.clean, cb);
+});
+
+gulp.task('sprite', function() {
+    var spriteData =
+        gulp.src(path.src.sprite) // путь, откуда берем картинки для спрайта
+            .pipe(spritesmith({
+                imgName: 'sprite.png',
+                cssName: 'sprite.scss',
+                cssFormat: 'scss',
+                algorithm: 'binary-tree',
+                imgPath: '../img/sprite.png'
+            }));
+
+    spriteData.img.pipe(gulp.dest(path.build.spriteimg)); // путь, куда сохраняем картинку
+    spriteData.css.pipe(gulp.dest(path.build.spritecss)); // путь, куда сохраняем стили
 });
 
 gulp.task('html:build', function () {
@@ -127,7 +146,7 @@ gulp.task('bundle', [
 ]);
 
 gulp.task('build', function() {
-  runSequence('clean', 'bundle');
+  runSequence('clean', 'sprite', 'bundle');
 });
 
 gulp.task('watch', function(){

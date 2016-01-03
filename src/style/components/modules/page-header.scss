@@ -1,5 +1,6 @@
 .page-header {
   padding-top: 30px;
+  padding-bottom: 80px;
   color: #fff;
   background-color: $bg-c;
   a {
@@ -9,9 +10,9 @@
 
 .page-nav {
   align-items: center;
+  padding-bottom: 70px;
   font-family: $font-b;
   font-weight: bold;
-  font-size: 18px;
   ul {
     @include reset-ul;
   }
@@ -19,3 +20,33 @@
     text-decoration: none;
   }
 }
+
+.intro {
+  position: relative;
+  &-left {
+    max-width: 430px;
+  }
+  &-title {
+    padding-bottom: 30px;
+    font-family: $font-b;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 50px;
+  }
+  &-desc {
+    width: 320px;
+    padding-bottom: 50px;
+    font-size: 18px;
+    line-height: 30px;
+    color: $desc-c;
+  }
+  .btn {
+    width: 320px;
+  }
+  &-img {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
