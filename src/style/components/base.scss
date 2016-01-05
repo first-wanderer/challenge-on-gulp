@@ -13,6 +13,24 @@ a {
   color: $link-c;
 }
 
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 2px solid $border-c;
+  text-align: left;
+  color: $text-onw-c;
+  line-height: 30px;
+  vertical-align: top;
+  padding: 20px 30px;
+}
+
+th {
+  background-color: $sect-bg-c;
+  font-weight: normal;
+}
+
 // section {
 //   position: relative;
 //   padding: 70px 0;

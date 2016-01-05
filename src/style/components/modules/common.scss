@@ -1,3 +1,12 @@
 .btn {
   @include m-btn;
 }
+
+.section-title {
+  margin: 0;
+  padding-bottom: 50px;
+  font-family: $font-b;
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 50px;
+}

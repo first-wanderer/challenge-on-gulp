@@ -117,8 +117,8 @@ gulp.task('style:build', function () {
         .pipe(plumber())
         .pipe(sass({
             includePaths: ['src/style/'],
-            outputStyle: 'compressed',
-            errLogToConsole: true
+            outputStyle: 'compressed'
+            // errLogToConsole: true
         }))
         .pipe(prefixer())
         .pipe(cssmin())
