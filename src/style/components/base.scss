@@ -31,6 +31,48 @@ th {
   font-weight: normal;
 }
 
+input[type="checkbox"], input[type="radio"] {
+  display: none;
+  & + label {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 45px;
+    cursor: pointer;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 0;
+      width: 12px;
+      height: 12px;
+      border: 1px solid $border-c;
+      border-radius: 2px;
+      background: #fff;
+    }
+  }
+}
+
+input[type="radio"] + label::before {
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked + label::before {
+  width: 4px;
+  height: 4px;
+  border-width: 5px;
+}
+
+input::-webkit-input-placeholder {color:$text-onw-c;}
+input::-moz-placeholder          {color:$text-onw-c;}/* Firefox 19+ */
+input:-moz-placeholder           {color:$text-onw-c;}/* Firefox 18- */
+input:-ms-input-placeholder      {color:$text-onw-c;}
+
+textarea::-webkit-input-placeholder {color:$text-onw-c;}
+textarea::-moz-placeholder          {color:$text-onw-c;}/* Firefox 19+ */
+textarea:-moz-placeholder           {color:$text-onw-c;}/* Firefox 18- */
+textarea:-ms-input-placeholder      {color:$text-onw-c;}
+
 // section {
 //   position: relative;
 //   padding: 70px 0;

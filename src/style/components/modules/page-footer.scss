@@ -1,6 +1,27 @@
+.page-footer {
+  padding-top: 65px;
+  padding-bottom: 85px;
+  background-color: $bg-foot;
+  color: #fff;
+  a {
+    color: $link-foot;
+    text-decoration: none;
+  }
+  .adds {
+    margin: 0;
+    margin-top: 75px;
+  }
+}
 .footer-nav {
   width: 700px;
+  padding-top: 20px;
   ul {
     @include reset-ul;
+  }
+  .nav-head {
+    margin-bottom: 35px;
+  }
+  li {
+    margin-bottom: 25px;
   }
 }

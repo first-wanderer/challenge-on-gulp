@@ -115,11 +115,13 @@ gulp.task('js:build', function () {
 gulp.task('style:build', function () {
     gulp.src(path.src.style)
         .pipe(plumber())
-        .pipe(sass({
-            includePaths: ['src/style/'],
-            outputStyle: 'compressed'
-            // errLogToConsole: true
-        }))
+        .pipe(sass({includePaths: ['src/style']}))
+        // .pipe(sass({includePaths: ['src/style/']}).on('error', sass.logError))
+        // .pipe(sass({
+        //     includePaths: ['src/style/'],
+        //     outputStyle: 'compressed'
+        //     errLogToConsole: true
+        // }))
         .pipe(prefixer())
         .pipe(cssmin())
         .pipe(gulp.dest(path.build.css))

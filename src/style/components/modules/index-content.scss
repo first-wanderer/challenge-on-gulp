@@ -69,6 +69,41 @@
 
 .feedform {
   max-width: 620px;
+  flex-grow: 1;
+}
+
+.feedform-block {
+  display: flex;
+  justify-content: space-between;
+  .label {
+    width: 95px;
+    margin-right: 10px;
+    font-family: $font-b;
+    font-weight: bold;
+    line-height: 24px;
+    text-align: right;
+    padding-top: 17px;
+  }
+  .inputs {
+    flex-grow: 1;
+    padding: 15px 25px;
+    margin-bottom: 25px;
+    border: 2px solid $border-c;
+    border-radius: 2px;
+    outline: none;
+    color: $text-onw-c;
+  }
+  .gender {
+    border-color: transparent;
+    label ~ label {
+      margin-left: 60px;
+    }
+  }
+  .btn {
+    width: auto;
+    margin-left: 105px;
+    flex-grow: 1;
+  }
 }
 
 .feedtext {
