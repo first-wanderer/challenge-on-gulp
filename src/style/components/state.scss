@@ -1,31 +1,77 @@
 // Стили состояний
-// a {
-//   &:hover {
-//     color: #fff;
-//     text-shadow: 0 0 1px #fff,
-//                  0 0 3px $color-light;
-//   }
-//   &:focus {
-//     color: #fff;
-//     text-decoration: none;
-//   }
-// }
-// .s-portfolio li {
-//   &:hover {
-//     text-shadow: 0 0 1px #fff,
-//                0 0 3px $color-light;
-//   }
-//   &.active {
-//     color: $color-light-bl;
-//     text-shadow: none;
-//     border-bottom: 1px solid $color-light-bl;
-//     cursor: default;
-//   }
-// }
 
-// .btn:hover, .btn:focus {
-//   text-decoration: none;
-//   outline: none;
-//   box-shadow: 0 0 1px 1px #fff,
-//               0 0 3px 1px $color-light;
-// }
+a {
+  &:hover {
+    color: $link-h;
+  }
+  &:active {
+    opacity: .3;
+  }
+}
+
+.btn {
+  &:hover {
+    background-color: $btn-h;
+    color: #fff;
+  }
+  &:active {
+    color: $btn-a;
+    opacity: 1;
+  }
+}
+
+.page-nav {
+  a {
+    &:hover {
+      text-decoration: underline;
+      color: #fff;
+    }
+    &:active {
+      text-decoration: none;
+      opacity: .3;
+    }
+  }
+}
+
+.page-footer {
+  a {
+    &:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+    &:active {
+      color: $link-foot;
+      text-decoration: none;
+      opacity: .3;
+    }
+  }
+}
+
+input[type="text"], textarea {
+  &:hover {
+    border-color: $input-h;
+  }
+  &:focus {
+    border-color: $bg-c;
+  }
+}
+
+input[type="radio"] {
+  & + label:hover::before {
+    background: $radio-bgh;
+  }
+  & + label:active::before {
+    background: $radio-bga;
+  }
+}
+
+input[type="radio"]:checked + label {
+  &:hover::before {
+    background-color: $link-c;
+    border-color: $radio-bgh;
+  }
+  &:active::before {
+    background-color: $radio-cbga;
+    border-color: $radio-bga;
+  }
+}

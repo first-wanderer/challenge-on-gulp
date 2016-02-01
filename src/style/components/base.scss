@@ -31,24 +31,31 @@ th {
   font-weight: normal;
 }
 
+input[type="text"], textarea {
+  padding: 15px 25px;
+  border: 2px solid $input-c;
+  border-radius: 2px;
+  outline: none;
+  color: $text-onw-c;
+}
+
 input[type="checkbox"], input[type="radio"] {
   display: none;
   & + label {
     position: relative;
     display: inline-block;
     vertical-align: top;
-    padding-left: 45px;
+    padding-left: 52px;
     cursor: pointer;
     &::before {
       content: "";
       position: absolute;
-      top: 6px;
+      top: -5px;
       left: 0;
-      width: 12px;
-      height: 12px;
-      border: 1px solid $border-c;
-      border-radius: 2px;
-      background: #fff;
+      width: 32px;
+      height: 32px;
+      border-radius: 3px;
+      background-color: $radio-bg;
     }
   }
 }
@@ -58,9 +65,10 @@ input[type="radio"] + label::before {
 }
 
 input[type="radio"]:checked + label::before {
-  width: 4px;
-  height: 4px;
-  border-width: 5px;
+  background-color: $link-c;
+  width: 12px;
+  height: 12px;
+  border: 10px solid $radio-bg;
 }
 
 input::-webkit-input-placeholder {color:$text-onw-c;}

@@ -86,15 +86,11 @@
   }
   .inputs {
     flex-grow: 1;
-    padding: 15px 25px;
     margin-bottom: 25px;
-    border: 2px solid $border-c;
-    border-radius: 2px;
-    outline: none;
-    color: $text-onw-c;
   }
   .gender {
-    border-color: transparent;
+    padding: 17px 0;
+    padding-left: 25px;
     label ~ label {
       margin-left: 60px;
     }
