@@ -10,7 +10,7 @@
 // }
 .l-container {
   position: relative;
-  max-width: $desktop;
+  max-width: $lg-min;
   margin: 0 auto;
   padding: 0 30px;
 }
@@ -23,5 +23,9 @@
 .page-nav {
   .l-flex {
     width: 670px;
+    @media (max-width: $sm-max) {
+      display: none;
+      text-align: center;
+    }
   }
 }

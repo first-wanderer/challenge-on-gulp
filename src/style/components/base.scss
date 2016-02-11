@@ -24,6 +24,9 @@ td, th {
   line-height: 30px;
   vertical-align: top;
   padding: 20px 30px;
+  @media (max-width: $sm-max) {
+    padding: 10px 15px;
+  }
 }
 
 th {

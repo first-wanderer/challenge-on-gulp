@@ -3,6 +3,12 @@
   padding-bottom: 85px;
   background-color: $bg-foot;
   color: #fff;
+  .footer-logo {
+    @media (max-width: $sm-max) {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
   a {
     color: $link-foot;
     text-decoration: none;
@@ -10,18 +16,41 @@
   .adds {
     margin: 0;
     margin-top: 75px;
+    @media (max-width: $sm-max) {
+      display: inline-block;
+      vertical-align: top;
+      margin-top: 15px;
+      margin-left: 10px;
+    }
+  }
+  .l-container {
+    @media (max-width: $sm-max) {
+      display: block;
+    }
   }
 }
 .footer-nav {
   width: 700px;
   padding-top: 20px;
+  @media (max-width: $sm-max) {
+    width: auto;
+  }
+  @media (max-width: $xs-max) {
+    flex-wrap: wrap;
+  }
   ul {
     @include reset-ul;
   }
   .nav-head {
     margin-bottom: 35px;
+    @media (max-width: $sm-max) {
+      margin-bottom: 15px;
+    }
   }
   li {
     margin-bottom: 25px;
+    @media (max-width: $sm-max) {
+      margin-bottom: 10px;
+    }
   }
 }

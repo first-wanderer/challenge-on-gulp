@@ -9,4 +9,7 @@
   font-weight: bold;
   font-size: 45px;
   line-height: 50px;
+  @media (max-width: $xs-max) {
+    padding-bottom: 10px;
+  }
 }

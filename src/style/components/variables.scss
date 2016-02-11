@@ -12,7 +12,21 @@
 // $min-width: 320px;
 // $height-header: 480px;
 $min-width: 320px;
-$desktop: 1020px;
+$xs-min: 480px;
+$xxs-max: ($xs-min - 1);
+$sm-min: 768px;
+$xs-max: ($sm-min - 1);
+$md-min: 992px;
+$sm-max: ($md-min - 1);
+$lg-min: 1020px;
+$md-max: ($lg-min - 1);
+// Usage
+// @media (max-width: $xs-max) { ... }
+// @media (min-width: $sm-min) { ... }
+// @media (max-width: $sm-max) { ... }
+// @media (min-width: $md-min) { ... }
+// @media (max-width: $md-max) { ... }
+// @media (min-width: $lg-min) { ... }
 
 $bg-c: #6451d5;
 $bg-foot: #2a2546;
