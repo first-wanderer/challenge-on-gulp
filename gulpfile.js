@@ -6,13 +6,13 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     sass = require('gulp-sass'),
     rigger = require('gulp-rigger'),
-    cssmin = require('gulp-minify-css'),
+    cleanCSS = require('gulp-clean-css'),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
     rimraf = require('rimraf'),
     browserSync = require('browser-sync'),
     reload = browserSync.reload,
-    runSequence = require('gulp-run-sequence'),
+    runSequence = require('run-sequence'),
     plumber = require('gulp-plumber'),
     jscs = require('gulp-jscs'),
     htmlhint = require('gulp-htmlhint'),
@@ -123,7 +123,7 @@ gulp.task('style:build', function () {
         //     errLogToConsole: true
         // }))
         .pipe(prefixer())
-        .pipe(cssmin())
+        .pipe(cleanCSS())
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({stream: true}));
 });
